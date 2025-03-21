@@ -1,3 +1,14 @@
-[gd_scene format=3 uid="uid://cnr7olkknm808"]
+[gd_scene load_steps=4 format=3 uid="uid://cnr7olkknm808"]
+
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_47d8u"]
+[ext_resource type="Texture2D" uid="uid://bj2ambwei5ogi" path="res://assets/bg.png" id="2_lkwxb"]
+[ext_resource type="PackedScene" uid="uid://cvidehvq0d3xf" path="res://scenes/hud.tscn" id="3_ys6tc"]
 
 [node name="Main" type="Node"]
+script = ExtResource("1_47d8u")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(500, 550)
+texture = ExtResource("2_lkwxb")
+
+[node name="HUD" parent="." instance=ExtResource("3_ys6tc")]
